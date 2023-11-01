@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "329d0bd0-59ce-42aa-a49f-42cf914852a8",
+		"name": "chomchob",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28997516"
+	},
+	"item": [
+		{
+			"name": "localhost:4000/customer/transferCryptocurrency",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"senderUserId\": 2,\r\n  \"receiverUserId\": 1,\r\n  \"fromCurrency\": 1,\r\n  \"toCurrency\": 1,\r\n  \"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/customer/transferCryptocurrency",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"customer",
+						"transferCryptocurrency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer can transfer different rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"senderUserId\": 1,\r\n  \"receiverUserId\": 2,\r\n  \"fromCurrency\": 1,\r\n  \"toCurrency\": 5,\r\n  \"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/customer/transferCryptocurrency",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"customer",
+						"transferCryptocurrency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer can delete (change id from 5 into 1 to delete)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fromCurrency\": 4,\r\n  \"toCurrency\": 1,\r\n  \"exchangeRate\": 2.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/admin//deleteExchangeRate/5",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"admin",
+						"",
+						"deleteExchangeRate",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin can add exchange rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fromCurrency\": 4,\r\n  \"toCurrency\": 1,\r\n  \"exchangeRate\": 2.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/admin/addExchangeRate",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"admin",
+						"addExchangeRate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin can adjust exchange rate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fromCurrency\": 5,\r\n  \"toCurrency\": 1,\r\n  \"exchangeRate\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/admin/updateExchangeRate",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"admin",
+						"updateExchangeRate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin can get total balance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"action\": \"decrease\",\r\n  \"amount\": 25\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/admin/totalBalance",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"admin",
+						"totalBalance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin can adjust customer balance",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"action\": \"decrease\",\r\n  \"amount\": 25\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/admin/adjustBalance/4",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"admin",
+						"adjustBalance",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"john_doe\",\r\n  \"email\": \"john2@example.com\",\r\n  \"password\": \"secretpassword\",\r\n  \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
