@@ -47,6 +47,25 @@ npm install
 npm run start
 ```
 
+## How to Import the Postman Collection
+1. Download the Collection File:
+   - Click on the Download button for the collection file.
+   - Save it to a location on your computer.
+   
+2. Open Postman:
+   - Launch the Postman application.
+   
+3. Import the Collection:
+   - In the top-left corner of Postman, click on the "Import" button.
+   - Choose the File:
+     - A file dialog will open. Locate and select the downloaded collection file.
+   
+4. Collection Appears:
+   - After successfully importing, you should see the collection in the left sidebar of your Postman application.
+
+## Using the Postman Collection
+You can now use the collection to test the API. Each request within the collection is organized by folders and includes detailed information in the request headers, body, and expected responses. Make sure to follow any additional instructions or notes provided in the request descriptions.
+
 ## Database Folder
 
 This folder contains with the database design from sequelize. The ERD is provided in a form of photo in assets folder.
