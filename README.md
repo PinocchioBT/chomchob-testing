@@ -2,10 +2,6 @@
 
 ## Programming Folder
 
-## Contents
-- Cryptocurrencies Project (Programming)
-- Database Folder
-
 ### Overview of programming folder
 This project aims to create a cryptocurrency management system with APIs for both administrators and customers. The system allows users to perform various actions such as buying, selling, and transferring cryptocurrencies, as well as administrative tasks like managing exchange rates and user balances.
 
